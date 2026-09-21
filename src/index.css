@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Hallmark · genre: atmospheric & studio · palette: warm-paper & flame-amber · 2+1 typography */
+:root {
+  --color-paper: oklch(97.5% 0.008 80);        /* #FAF9F5 */
+  --color-paper-2: oklch(95.0% 0.010 80);      /* #F4F1EA */
+  --color-paper-elevated: oklch(99.5% 0.003 80);/* Pure warm surface */
+  --color-rule: oklch(89.5% 0.008 80);         /* #E5E1D6 Hairline */
+  --color-rule-dark: oklch(78.0% 0.012 80);    /* #C8C2B3 Active border */
+  --color-ink: oklch(18.0% 0.012 60);          /* #1C1917 Deep solid ink */
+  --color-ink-muted: oklch(46.0% 0.012 60);    /* #58534E Readable secondary */
+  --color-ink-faint: oklch(65.0% 0.010 60);    /* #8E8880 Tertiary */
+  --color-accent: oklch(62.0% 0.210 42);       /* #EA580C Focused flame amber (<= 3% surface) */
+  --color-focus: oklch(62.0% 0.210 42);
+
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'BIZ UDPGothic', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --ease-hallmark: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-rule);
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  /* Universal Hallmark focus ring discipline */
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: inherit;
+  }
+
+  /* Monospace number numerals tabular lining */
+  .font-mono, [data-mono] {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Tactile button press feeling */
+  button:active:not(:disabled) {
+    transform: translateY(1px);
+    transition: transform 60ms var(--ease-hallmark);
+  }
+}
