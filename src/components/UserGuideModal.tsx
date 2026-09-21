@@ -13,7 +13,7 @@ import {
   HelpCircle,
   Check,
 } from 'lucide-react';
-import { KanaderuLogo } from './KanaderuLogo';
+import { KanaderunrunLogo } from './KanaderunrunLogo';
 
 interface UserGuideModalProps {
   isOpen: boolean;
@@ -44,11 +44,11 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose 
 
         {/* Header Branding */}
         <div className="flex items-center gap-3.5 mb-5 pb-4 border-b border-[#E5E1D6]">
-          <KanaderuLogo className="w-11 h-11 shrink-0" />
+          <KanaderunrunLogo className="w-11 h-11 shrink-0" />
           <div>
             <div className="flex items-center gap-2">
               <h2 className="text-xl font-bold text-[#1C1917] tracking-tight">
-                Kanaderu 使い方ガイド
+                Kanaderunrun 使い方ガイド
               </h2>
               <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-200">
                 クイックマニュアル
@@ -211,7 +211,7 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose 
               <div className="p-3.5 rounded-2xl bg-[#FAF9F5] border border-[#E5E1D6]">
                 <div className="font-bold text-xs text-[#1C1917]">Q. iPhoneの写真（HEIC形式）は使えますか？</div>
                 <p className="text-[11px] text-[#58534E] mt-1 leading-relaxed">
-                  A. はい、そのまま追加いただけます。Kanaderuがブラウザ内で自動変換し、最適な画質に自動最適化します。
+                  A. はい、そのまま追加いただけます。Kanaderunrunがブラウザ内で自動変換し、最適な画質に自動最適化します。
                 </p>
               </div>
 
@@ -248,7 +248,7 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose 
             onClick={handleClose}
             className="w-full sm:w-auto px-6 py-2.5 bg-[#1C1917] hover:bg-[#292524] text-white text-xs font-bold rounded-2xl shadow-xs transition-all flex items-center justify-center gap-1.5"
           >
-            <span>Kanaderu をはじめる</span>
+            <span>Kanaderunrun をはじめる</span>
             <Check className="w-3.5 h-3.5 text-amber-400" />
           </button>
         </div>

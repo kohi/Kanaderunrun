@@ -8,7 +8,7 @@ import {
   Check,
   HelpCircle,
 } from 'lucide-react';
-import { KanaderuLogo } from './KanaderuLogo';
+import { KanaderunrunLogo } from './KanaderunrunLogo';
 
 interface HeaderProps {
   currentStep: 1 | 2 | 3;
@@ -38,11 +38,11 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
         {/* Brand */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <KanaderuLogo className="w-9 h-9 shrink-0" />
+          <KanaderunrunLogo className="w-9 h-9 shrink-0" />
           <div>
             <div className="flex items-center gap-2">
               <h1 className="font-bold text-base sm:text-lg text-[#1C1917] tracking-tight">
-                Kanaderu
+                Kanaderunrun
               </h1>
               <span className="hidden sm:inline text-[10px] font-mono font-semibold tracking-wider px-2 py-0.5 rounded-full bg-[#F4F1EA] text-[#58534E] border border-[#E5E1D6]">
                 v2.0

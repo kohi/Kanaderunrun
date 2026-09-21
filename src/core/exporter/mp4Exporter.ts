@@ -292,7 +292,7 @@ export function exportToMp4(
 
     const mp4Buffer = target.buffer;
     const blob = new Blob([mp4Buffer], { type: 'video/mp4' });
-    const safeSongName = (project.sections ? 'Kanaderu' : song?.name ?? 'movie').replace(/[/\\?%*:|"<>]/g, '_').trim() || 'movie';
+    const safeSongName = (project.sections ? 'Kanaderunrun' : song?.name ?? 'movie').replace(/[/\\?%*:|"<>]/g, '_').trim() || 'movie';
     const filename = `${safeSongName}_${getFormattedDate()}.mp4`;
     const downloadUrl = URL.createObjectURL(blob);
 

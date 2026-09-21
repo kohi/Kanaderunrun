@@ -1,4 +1,4 @@
-# 開発・検証・配備ガイド
+# Kanaderunrun 開発・検証・配備ガイド
 
 ## セットアップ
 
@@ -25,6 +25,7 @@ npm run dev
 | `src/core/exporter/` | H.264/AACエンコードとMP4生成 |
 | `src/core/utils/` | 画像読込、素材操作、IndexedDB保存、リソース解放 |
 | `src/tests/` | Vitestの回帰テスト |
+| `public/favicon_io/` | アプリアイコン、favicon、Apple Touch Icon、Web Manifest |
 | `public/.htaccess` | Apache向けHTTPSリダイレクト・MIME・キャッシュ設定 |
 
 ## 必須チェック
@@ -83,3 +84,9 @@ IndexedDBはブラウザとオリジン（プロトコル・ホスト・ポー�
 - 動画の元音声はブラウザがデコードできる場合のみ使用できます。
 - 映像・音声・MP4の生成データをメモリに保持するため、長い動画や多量の素材では端末の制限を受けます。
 - Viteは500kBを超えるバンドルの警告を出します。現状はビルド成功を妨げません。
+
+## アプリ名称・アイコン
+
+表示名は `Kanaderunrun` です。提供された `favicon_io` の画像は `public/favicon_io/` に配置し、ヘッダー・使い方ガイド・ブラウザタブ・ホーム画面用アイコンで使用します。マニフェスト内のパスも相対指定で、サブフォルダ配置に対応します。
+
+既存の保存データを引き継ぐため、IndexedDB名 `kanaderu-projects` とlocalStorageの既存キーは変更していません。
